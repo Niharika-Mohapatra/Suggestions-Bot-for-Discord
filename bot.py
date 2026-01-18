@@ -18,7 +18,7 @@ client = discord.Client(intents=intents)
 TOKEN = os.getenv("DISCORD_TOKEN")
 SUGGESTION_CHANNEL_ID = int(os.getenv("SUGGESTION_CHANNEL_ID"))
 
-bot = command.Bot(command_prefix="/", intents=intents)
+bot = commands.Bot(command_prefix="/", intents=intents)
 
 def search_gr(bookname):
     query = f"{book_name} site:goodreads.com"
