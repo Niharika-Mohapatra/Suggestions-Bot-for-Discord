@@ -9,12 +9,15 @@ from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
 
+intents = discord.Intents.default()
+intents.guilds = True
+intents.reactions = True
+
 load_dotenv()
-client = discord.Client()
+client = discord.Client(intents=intents)
 TOKEN = os.getenv("DISCORD_TOKEN")
 SUGGESTION_CHANNEL_ID = int(os.getenv("SUGGESTION_CHANNEL_ID"))
 
-intents = discord.ClientIntents.default()
 bot = command.Bot(command_prefix="/", intents=intents)
 
 def search_gr(bookname):
