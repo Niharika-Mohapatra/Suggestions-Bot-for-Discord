@@ -21,7 +21,7 @@ SUGGESTION_CHANNEL_ID = int(os.getenv("SUGGESTION_CHANNEL_ID"))
 bot = commands.Bot(command_prefix="/", intents=intents)
 
 def search_gr(bookname):
-    query = f"{book_name} site:goodreads.com"
+    query = f"{bookname} site:goodreads.com"
     url = "https://www.google.com/search?q=" + query.replace(" ", "+")
     headers = {"User-Agent":"Mozilla/5.0"}
     page = requests.get(url, headers=headers)
