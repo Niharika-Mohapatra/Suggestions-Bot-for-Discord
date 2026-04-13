@@ -1,4 +1,4 @@
-✅ Fixed + improved version (drop-in)
+#✅ Fixed + improved version (drop-in)
 import os
 import discord
 from discord import app_commands
